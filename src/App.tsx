@@ -45,9 +45,9 @@ export default function App() {
         const currentData: Record<number, SpeedEntry> = {}
 
         // Process all entries
-        const list = Object.entries(raw).map(([timestamp, val]: [string, any]) => {
+        const list = Object.entries(raw).map(([id, val]: [string, any]) => {
           const entry = {
-            timestamp: Number(timestamp),
+            timestamp: Number(val.timestamp),
             speed: val.speed,
             isNew: false,
           }
